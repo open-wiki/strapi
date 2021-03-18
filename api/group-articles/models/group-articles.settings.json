@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "group_articles",
+  "info": {
+    "name": "Group_Articles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "groups": {
+      "collection": "group",
+      "via": "group_articles",
+      "dominant": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "group_articles",
+      "dominant": true
+    }
+  }
+}

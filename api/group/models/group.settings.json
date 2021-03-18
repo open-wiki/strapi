@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "name": "Group"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "GroupOwner": {
+      "type": "string"
+    },
+    "Followers": {
+      "type": "integer"
+    },
+    "articles": {
+      "via": "group",
+      "collection": "article"
+    },
+    "group_users": {
+      "via": "groups",
+      "collection": "group-users"
+    },
+    "group_articles": {
+      "via": "groups",
+      "collection": "group-articles"
+    },
+    "group_tags": {
+      "via": "groups",
+      "collection": "group-tags"
+    },
+    "group_roles": {
+      "via": "groups",
+      "collection": "group-roles"
+    }
+  }
+}

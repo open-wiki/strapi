@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "Tags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "TagName": {
+      "type": "string"
+    },
+    "group_tags": {
+      "via": "tags",
+      "collection": "group-tags"
+    },
+    "article_tags": {
+      "via": "tags",
+      "collection": "article-tags"
+    }
+  }
+}

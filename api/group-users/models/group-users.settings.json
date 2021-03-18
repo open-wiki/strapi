@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "group_users",
+  "info": {
+    "name": "Group_Users"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "groups": {
+      "collection": "group",
+      "via": "group_users",
+      "dominant": true
+    },
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "group_users",
+      "dominant": true
+    }
+  }
+}

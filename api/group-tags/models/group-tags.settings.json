@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "group_tags",
+  "info": {
+    "name": "GroupTags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "groups": {
+      "collection": "group",
+      "via": "group_tags",
+      "dominant": true
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "group_tags",
+      "dominant": true
+    }
+  }
+}
